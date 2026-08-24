@@ -5,7 +5,7 @@ mis habilidades y una forma de contacto.
 
 **Autora:** Florencia Lelis Guzmán
 **GitHub:** [github.com/fguzman3026](https://github.com/fguzman3026)
-**Demo publicada:** [completar con la URL de Vercel una vez publicada]
+**Demo publicada:** https://pfo-1-landing-page.vercel.app/
 
 ## Descripción
 
