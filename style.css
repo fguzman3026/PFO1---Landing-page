@@ -1,0 +1,285 @@
+/* ---------- Variables generales ---------- */
+:root {
+  --bg: #16171c;
+  --bg-card: #1e2027;
+  --text: #f1f1ef;
+  --text-muted: #a3a5ad;
+  --accent: #5eead4;
+  --border: #2a2c34;
+  --font-title: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: var(--font-title);
+  margin: 0 0 0.5rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 5%;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  color: var(--accent);
+}
+
+/* ---------- Hero: Flexbox ---------- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 4rem 5%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.hero-text h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.hero-tagline {
+  color: var(--text-muted);
+  max-width: 45ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Botones (con transición) ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #0d0e11;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ---------- Secciones generales ---------- */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 5%;
+  border-top: 1px solid var(--border);
+}
+
+.section-text {
+  color: var(--text-muted);
+  max-width: 65ch;
+}
+
+/* ---------- Habilidades: Grid ---------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skill-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ---------- Hobbies ---------- */
+.hobby-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  max-width: 65ch;
+}
+
+.hobby-card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* ---------- Formulario de contacto ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 450px;
+  margin-top: 1.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.form-field input,
+.form-field textarea {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-feedback {
+  color: var(--accent);
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.direct-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 2rem 5%;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.site-footer a {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+/* Respeta a quienes prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
